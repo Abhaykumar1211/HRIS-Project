@@ -1,0 +1,50 @@
+<mat-card style="height:850px; width: 25%;">
+    <mat-card-content>
+        <mat-sidenav-container style="height: 900px" class="example-container">
+            <mat-sidenav class="custom-mat-sidenav" mode="side" opened>
+                <div class="d-flex flex-column mx-auto icon-column">
+                    <img src="../../assets/dots.png">
+                <img *ngFor="let image of images" 
+                    [src]="image.path" 
+                    [ngStyle]="{'opacity': isHovering[image.id]||activeNav==image.id ? '1' : '0.5'}" 
+                    (mouseover)="setHoverState(true, image.id)" 
+                    (mouseleave)="setHoverState(false, image.id)"
+                    (click)="setActiveNav(image.id)">
+                    
+                    
+                </div>
+
+            </mat-sidenav>
+            <mat-sidenav-content class="content-sidenav">
+                <div *ngIf="activeNav=='dashboard'">
+                    Dashboard
+                    
+                </div>
+                <div *ngIf="activeNav=='folder'">
+                    My Company
+                </div >
+                <div *ngIf="activeNav=='user'">
+                    Employees
+                </div>
+                <div *ngIf="activeNav=='leave'">
+                    Manage Leave
+                </div>
+                <div *ngIf="activeNav=='time'">
+                    Time & Attendance
+                    <div>
+                       
+                    </div>
+                </div>
+                <div *ngIf="activeNav=='receive'">
+                    Manage Payroll
+                </div>
+                <div *ngIf="activeNav=='graph'">
+                    Reports
+                </div>
+                <div *ngIf="activeNav=='security'">
+                    Security
+                </div>
+            </mat-sidenav-content>
+          </mat-sidenav-container>
+    </mat-card-content>
+</mat-card>

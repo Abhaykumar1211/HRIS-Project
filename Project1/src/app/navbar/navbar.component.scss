@@ -1,0 +1,27 @@
+.custom-mat-sidenav{
+    background-color: #0646B8;
+    border-radius: 20px;
+    padding: 10px 19px;
+    width: 70px;
+}
+
+.icon-column{
+    img{
+        margin-top: 65px;
+    }
+    img:nth-child(1){
+        margin-top: 0;
+    }
+}
+
+.active{
+    opacity: 100%;
+}
+
+.content-sidenav{
+    padding: 10px 19px;
+    font-weight: bold;
+    font-size: 17px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    margin: 0 auto;
+}
